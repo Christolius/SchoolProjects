@@ -6,11 +6,11 @@
 */
 
 const buku = {
-    judul: "Belajar JavaScript", // Judul buku
-    penulis: "Andi Pratama", // Penulis buku
-    tahunTerbit: null, // Tahun terbit buku
-    tersedia: true, // Buku tersedia
-    harga: 125000 // Harga buku
+    judul: "Belajar JavaScript", // Judul buku (String)
+    penulis: "Andi Pratama", // Penulis buku (String)
+    tahunTerbit: null, // Tahun terbit buku (null)
+    tersedia: true, // Buku tersedia (boolean)
+    harga: 125000 // Harga buku (Number)
 }
 
 // VVV Menunjukan data buku ke terminal VVV
