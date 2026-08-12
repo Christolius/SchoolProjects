@@ -4,10 +4,12 @@
         <title>Formulir Pendaftaran Ekstrakulikuler</title>
     </head>
     <body>
-        <img src="logo-telkom.png" alt="Logo Telkom Schools" width=100>
-        <h1>FORMULIR PENDAFTARAN EKSTRAKULIKULER</h1>
+        <table>
+            <td><img src="logo-telkom.png" alt="Logo Telkom Schools" width=100></td>
+            <td><h1>FORMULIR PENDAFTARAN EKSTRAKULIKULER</h1></td>
+        </table>
         <h3><em>Satu Bakat, Sejuta Prestasi</em></h3>
-
+        
         <hr>
 
         <a href="" target="_self">Beranda</a>
@@ -25,7 +27,7 @@
         <strong>Jam Pelayanan: 08.00 - 14.00 WIB</strong><br>
         <strong>Lokasi Pendaftaran: Ruang Kesiswaan SMK Telkom Malang</strong>
 
-        <table border=1>
+        <table border=1 cellpadding="8" cellspacing="0">
             <tr>
                 <th colspan=2>FORM PENDAFTARAN EKSTRAKULIKULER</th>
             </tr>
@@ -76,6 +78,52 @@
                 <td><label>Alasan Bergabung</label></td>
                 <td><textarea type="text" required placeholder="Tuliskan alasanmu"></textarea></td>
             </tr>
+            <tr>
+                <td><label>Kesediaan Mengikuti Kegiatan</label></td>
+                <td>
+                    <input type="radio" name="kesediaan" required>Latihan Rutin
+                    <input type="radio" name="kesediaan" required>Kegiatan Lomba
+                    <input type="radio" name="kesediaan" required>Camp/Pelatihan Luar Sekolah
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Daftar Sekarang</button>
+                    <button type="reset">Batal</button>
+                </td>
+            </tr>
         </table>
+        <br>
+        <table border=1 cellpadding="4">
+            <caption>Ringkasan Data Pendaftar</caption>
+            <tr>
+                <th>No</th>
+                <th>Nama Kegiatan</th>
+                <th>Keterangan</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Futsal</td>
+                <td>......</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Paskibra</td>
+                <td>......</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>English Club</td>
+                <td>......</td>
+            </tr>
+        </table>
+        <p>Untuk informasi lebih lanjut, kunjungi website resmi kami di <a href="https://www.smktelkom-mlg.sch.id">www.smktelkom-mlg.sch.id</a></p>
+        <p>
+            Biaya kegiatan sudah termasuk seragam *
+            <br>
+            Formulir wajib dikembalikan maksimal H-2 **
+        </p>
+        <hr>
+        <p>© 2026 SMK Telkom Malang. All Rights Reserved.</p>
     </body>
 </html>
