@@ -1,0 +1,32 @@
+body {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  background-color: rgb(255,255,255);
+  color: BLACK;
+}
+
+h1, h2 {
+    font-weight: lighter;
+}
+
+.holder {
+    padding: 1px 10px;
+    background: rgba(0,0,0, .1);
+    border-radius: 25px;
+    margin: 0 30%;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+}
+
+#title-motto {
+    font-size: medium;
+    text-align: center;
+}
+
+#motto {
+    font-weight: bold;
+    font-size: small;
+    text-align: center;
+}
