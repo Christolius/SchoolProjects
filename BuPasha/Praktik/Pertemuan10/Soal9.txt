@@ -1,0 +1,2 @@
+for loop digunakan pada saat ingin berhitung atau ingin memproses data dari dalam tabel.
+while loop digunakan saat ingin melakukan pengulangan tanpa perlu perhitungan.
