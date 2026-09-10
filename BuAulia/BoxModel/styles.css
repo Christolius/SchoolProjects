@@ -1,0 +1,25 @@
+#kartu-profil {
+    padding: 10px 10px;
+    padding-top: 0px;
+    border: 3px solid;
+    border-radius: 8px;
+    max-width: 250px;
+}
+
+h1 {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+#data th {
+    text-align: left;
+}
+
+#data td {
+    text-align: right;
+}
