@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Counter</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+            }
+            #angka {
+                font-size: 64px;
+            }
+            button {
+                font-size: 20px;
+                padding: 10px 20px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Counter</h2>
+        <div id="angka">0</div>
+        <button id="tambah">+ Tambah</button>
+        <button id="kurang">- Kurang</button>
+        <button id="reset">Reset</button>
+
+        <script>
+            // Jawaban No 1.:
+            // Variabel "hitung" menggunakan let bukan const agar dapat di
+            // modifikasi/ganti sedangkan const tidak dapat di ganti.
+            
+            // Jawaban No 2.:
+            // Jika "angka.textContent = hitung;" maka variabel hitung di JS akan
+            // berubah jika tombol di tekan tetapi counter yang di HTML tidak
+            // akan berubah.
+            let hitung = 0;
+            const angka = document.querySelector("#angka");
+
+            document.querySelector("#tambah").addEventListener('click', () => {
+                hitung += 1;
+                angka.textContent = hitung;
+                if (hitung > 0) {
+                    angka.style.color = 'green';
+                }
+            });
+
+            document.querySelector("#kurang").addEventListener('click', () => {
+                hitung = Math.max(0, hitung-1);
+                angka.textContent = hitung;
+                if (hitung < 0) {
+                    angka.style.color = 'red';
+                }
+            });
+
+            document.querySelector("#reset").addEventListener('click', () => {
+                hitung = 0;
+                angka.textContent = 0;
+                angka.style.color = "";
+            });
+        </script>
+    </body>
+</html>
