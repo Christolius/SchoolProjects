@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 420px;
+            margin: 40px auto;
+        }
+        li {
+            margin: 8px 0;
+            cursor: pointer;
+        }
+        li.selesai {
+            text-decoration: line-through;
+            color: gray;
+        }
+        li button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>To-Do List</h2>
+    <input type="text" id="tugas" placeholder="Tulis tugas...">
+    <button id="btnTambah">Tambah</button>
+    <p>Tugas belum selesai: <b id="jumlah">0</b></p>
+    <ul id="daftar"></ul>
+    <button id="btnHapusSelesai">Hapus Semua Tugas Selesai</button>
+
+    <script>
+        const tugas = document.querySelector("#tugas");
+        const btnTambah = document.querySelector("#btnTambah");
+        const btnHapusSelesai = document.querySelector("#btnHapusSelesai");
+        const daftar = document.querySelector("#daftar");
+        const jumlah = document.querySelector("#jumlah");
+
+        function hitungTugas(){
+            const semua = document.querySelectorAll("#daftar li");
+            const selesai = document.querySelectorAll("#daftar li.selesai");
+            jumlah.textContent = semua.length - selesai.length
+        }
+
+        function tambahTugas(){
+            if (tugas.value.trim() === ""){
+                alert("Tugas tidak boleh kosong.");
+                return;
+            }
+
+            const li = document.createElement("li");
+            const teks = document.createElement("span");
+            teks.textContent = tugas.value;
+
+            teks.addEventListener("click", () => {
+                li.classList.toggle("selesai");
+                hitungTugas();
+            });
+
+            const btnHapus = document.createElement("button");
+            btnHapus.textContent = "Hapus";
+            btnHapus.addEventListener("click", () => {
+                li.remove();
+                hitungTugas();
+            })
+
+            li.append(teks, btnHapus);
+            daftar.appendChild(li);
+            
+            tugas.value = "";
+            hitungTugas();
+        }
+
+        btnTambah.addEventListener("click", tambahTugas);
+        tugas.addEventListener("keydown", (input) => {
+            if (input.key === "Enter"){
+                tambahTugas();
+            }
+        })
+
+        btnHapusSelesai.addEventListener("click", () => {
+            for (const li of document.querySelectorAll("li.selesai")){
+                li.remove()
+            }
+            hitungTugas()
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Profil Sekolah</title>
+        <style>
+            body {
+                font-family: Arial;
+                padding: 30px;
+                background: white;
+                color: black;
+                transition: all 0.3s;
+            }
+            body.gelap {
+                background: #1e1e1e;
+                color: #f5f5f5;
+            }
+
+            .info-box {
+                margin-top: 20px;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+                color: #333;
+                transition: all 0.3s;
+            }
+            
+            body.gelap .info-box {
+                background-color: #2d2d2d;
+                color: #e0e0e0;
+                border-color: #444;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>SMK Maju Jaya</h1>
+        <p>Jurusan Rekayasa Perankat Lunak.</p>
+
+        <div class="info-box">
+            <h3>Informasi Pendaftaran</h3>
+            <p>Penerimaan Peserta Didik Baru untuk kelas RPL telah dibuka. Segera daftar!</p>
+        </div>
+        <br>
+        <button id="btnTema">Mode Gelap</button>
+
+        <script>
+            const btnTema = document.querySelector("#btnTema");
+
+            btnTema.addEventListener("click", () => {
+                document.body.classList.toggle("gelap");
+
+                if (document.body.classList.contains("gelap")){
+                    btnTema.textContent = "Mode Terang";
+                } else {
+                    btnTema.textContent = "Mode Gelap";
+                }
+            })
+        </script>
+    </body>
+</html>
